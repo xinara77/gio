@@ -1,0 +1,111 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "92qo476low",
+    "contentId": "builtin_single-choice-UfC8pp",
+    "invalidContentId": "builtin_text-dXcuA_",
+    "keywords": {
+      "registro": [
+        "registro",
+        "Registro electrónico"
+      ],
+      "requerimiento": [
+        "requerimiento",
+        "Aportar información a una solicitud anterior o contestar un requerimiento del Ayuntamiento"
+      ],
+      "notificacion": [
+        "notificacion",
+        "Acceder a las notificaciones electrónicas"
+      ],
+      "incidencia": [
+        "incidencia",
+        "Resolver una incidencia técnica con los servicios electrónicos"
+      ],
+      "informacion": [
+        "informacion",
+        "Solicitar información general"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-UfC8pp {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "074431"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"92qo476low\",\"contentId\":\"builtin_single-choice-UfC8pp\",\"invalidContentId\":\"builtin_text-dXcuA_\",\"keywords\":{\"registro\":[\"registro\",\"Registro electrónico\"],\"requerimiento\":[\"requerimiento\",\"Aportar información a una solicitud anterior o contestar un requerimiento del Ayuntamiento\"],\"notificacion\":[\"notificacion\",\"Acceder a las notificaciones electrónicas\"],\"incidencia\":[\"incidencia\",\"Resolver una incidencia técnica con los servicios electrónicos\"],\"informacion\":[\"informacion\",\"Solicitar información general\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-92qo476low'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "669713"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"92qo476low\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-92qo476low']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "832729"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-dXcuA_ {}",
+        "say #!builtin_single-choice-UfC8pp {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "215694"
+    }
+  ]
+}

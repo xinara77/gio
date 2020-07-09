@@ -1,0 +1,84 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "choice-ayudas_sociales",
+  "description": "",
+  "nodes": [
+    {
+      "id": "8dafccf0e7",
+      "name": "node-renta_social",
+      "onEnter": [
+        "say #!builtin_text-0oHiGZ"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-d98700",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-ayudas_sociales",
+      "flow": "skills/choice-d98700.flow.json",
+      "next": [
+        {
+          "caption": "User picked [renta_s...]",
+          "condition": "temp['skill-choice-ret-4pcgex7hfm'] == \"renta_social\"",
+          "node": "node-renta_social"
+        },
+        {
+          "caption": "User picked [as_aten...]",
+          "condition": "temp['skill-choice-ret-4pcgex7hfm'] == \"as_atencion_temprana\"",
+          "node": "node-atencion_temprana"
+        },
+        {
+          "caption": "User picked [as_come...]",
+          "condition": "temp['skill-choice-ret-4pcgex7hfm'] == \"as_comedor\"",
+          "node": "node-beca_comedor"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "encuesta.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "5baaef38ad",
+      "name": "node-atencion_temprana",
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Y69Rpm"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "ecc203e47b",
+      "name": "node-beca_comedor",
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-gnXiE7"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

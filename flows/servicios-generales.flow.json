@@ -1,0 +1,124 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "choice-servicios_generales",
+  "description": "",
+  "nodes": [
+    {
+      "id": "7fae9b1dff",
+      "name": "node-registro",
+      "onEnter": [
+        "say #!builtin_text-uq7iIM"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-8bc6d6",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-servicios_generales",
+      "flow": "skills/choice-8bc6d6.flow.json",
+      "next": [
+        {
+          "caption": "User picked [registro]",
+          "condition": "temp['skill-choice-ret-92qo476low'] == \"registro\"",
+          "node": "node-registro"
+        },
+        {
+          "caption": "User picked [requeri...]",
+          "condition": "temp['skill-choice-ret-92qo476low'] == \"requerimiento\"",
+          "node": "node-requerimiento"
+        },
+        {
+          "caption": "User picked [notific...]",
+          "condition": "temp['skill-choice-ret-92qo476low'] == \"notificacion\"",
+          "node": "node-notificacion"
+        },
+        {
+          "caption": "User picked [inciden...]",
+          "condition": "temp['skill-choice-ret-92qo476low'] == \"incidencia\"",
+          "node": "node-incidencia"
+        },
+        {
+          "caption": "User picked [informa...]",
+          "condition": "temp['skill-choice-ret-92qo476low'] == \"informacion\"",
+          "node": "node-informacion"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "encuesta.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "3676a16395",
+      "name": "node-requerimiento",
+      "onEnter": [
+        "say #!builtin_text-7Y11Gs"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "9c2185aef9",
+      "name": "node-notificacion",
+      "onEnter": [
+        "say #!builtin_text-kb0YxI"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "1865cdbdbe",
+      "name": "node-incidencia",
+      "onEnter": [
+        "say #!builtin_text-0s_VFn"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "3018e0a7ee",
+      "name": "node-informacion",
+      "onEnter": [
+        "say #!builtin_text-VsV_p1"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    }
+  ]
+}

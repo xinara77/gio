@@ -1,0 +1,100 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "f9rnrbru1q",
+    "contentId": "builtin_single-choice-CHvmDX",
+    "invalidContentId": "",
+    "keywords": {
+      "uso": [
+        "uso",
+        "Primera ocupación"
+      ],
+      "obra": [
+        "obra",
+        "Vivienda o local"
+      ],
+      "calle": [
+        "calle",
+        "Vía pública"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 3,
+      "repeatChoicesOnInvalid": false
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-CHvmDX {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "268329"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"f9rnrbru1q\",\"contentId\":\"builtin_single-choice-CHvmDX\",\"invalidContentId\":\"\",\"keywords\":{\"uso\":[\"uso\",\"Primera ocupación\"],\"obra\":[\"obra\",\"Vivienda o local\"],\"calle\":[\"calle\",\"Vía pública\"]},\"config\":{\"nbMaxRetries\":3,\"repeatChoicesOnInvalid\":false}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-f9rnrbru1q'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "430071"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"f9rnrbru1q\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-f9rnrbru1q']) > Number(3)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "098826"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "839607"
+    }
+  ]
+}

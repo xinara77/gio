@@ -1,0 +1,103 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "4pcgex7hfm",
+    "contentId": "builtin_single-choice-SQDAPg",
+    "invalidContentId": "builtin_text-dXcuA_",
+    "keywords": {
+      "renta_social": [
+        "renta_social",
+        "Renta social básica"
+      ],
+      "as_atencion_temprana": [
+        "as_atencion_temprana",
+        "Beca atención temprana"
+      ],
+      "as_comedor": [
+        "as_comedor",
+        "Beca comedor"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-SQDAPg {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "858561"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"4pcgex7hfm\",\"contentId\":\"builtin_single-choice-SQDAPg\",\"invalidContentId\":\"builtin_text-dXcuA_\",\"keywords\":{\"renta_social\":[\"renta_social\",\"Renta social básica\"],\"as_atencion_temprana\":[\"as_atencion_temprana\",\"Beca atención temprana\"],\"as_comedor\":[\"as_comedor\",\"Beca comedor\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-4pcgex7hfm'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "557983"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"4pcgex7hfm\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-4pcgex7hfm']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "579167"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-dXcuA_ {}",
+        "say #!builtin_single-choice-SQDAPg {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "896065"
+    }
+  ]
+}

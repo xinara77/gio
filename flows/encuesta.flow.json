@@ -1,0 +1,79 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "choice-satisfaccion",
+  "description": "",
+  "nodes": [
+    {
+      "id": "480d49ba26",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-satisfaccion",
+      "flow": "skills/choice-87c88b.flow.json",
+      "next": [
+        {
+          "caption": "User picked [ok]",
+          "condition": "temp['skill-choice-ret-mkyruloxgn'] == \"ok\"",
+          "node": "node-encontrado"
+        },
+        {
+          "caption": "User picked [fallo]",
+          "condition": "temp['skill-choice-ret-mkyruloxgn'] == \"fallo\"",
+          "node": "node-no_encontrado"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "node-despedida"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "8d60cd7874",
+      "name": "node-encontrado",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-despedida"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-8-w9Yb"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "7a8c42e04c",
+      "name": "node-despedida",
+      "next": [
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-gkZjJv"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "eccf1ce976",
+      "name": "node-no_encontrado",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-despedida"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-uhxmBg"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

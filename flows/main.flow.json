@@ -1,0 +1,57 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "true",
+          "node": "preguntar_nombre"
+        }
+      ],
+      "onEnter": [
+        "builtin/removeContext {\"contexts\":\"padron, subvencion, social, general\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"name\",\"value\":\"null\"}"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "2e497aa774",
+      "name": "preguntar_nombre",
+      "next": [
+        {
+          "condition": "true",
+          "node": "saludo"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-9cDQE8"
+      ],
+      "onReceive": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"name\",\"value\":\"{{event.preview}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "bdd9840356",
+      "name": "saludo",
+      "next": [
+        {
+          "condition": "true",
+          "node": "temas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-orZ7kw"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

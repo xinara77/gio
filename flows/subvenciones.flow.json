@@ -1,0 +1,104 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "choice-temas_subvenciones",
+  "description": "",
+  "nodes": [
+    {
+      "id": "a51831d7b7",
+      "name": "node-subv_transparencia",
+      "onEnter": [
+        "say #!builtin_text-0UtnsT"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-459f57",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-temas_subvenciones",
+      "flow": "skills/choice-459f57.flow.json",
+      "next": [
+        {
+          "caption": "User picked [subv_tr...]",
+          "condition": "temp['skill-choice-ret-lycbh4qpcv'] == \"subv_trabajadores\"",
+          "node": "node-subv_trabajadores"
+        },
+        {
+          "caption": "User picked [subv_im...]",
+          "condition": "temp['skill-choice-ret-lycbh4qpcv'] == \"subv_impulsa\"",
+          "node": "node-subv_transparencia-copy"
+        },
+        {
+          "caption": "User picked [subv_re...]",
+          "condition": "temp['skill-choice-ret-lycbh4qpcv'] == \"subv_registro\"",
+          "node": "node-subv_transparencia-copy-copy"
+        },
+        {
+          "caption": "User picked [subv_tr...]",
+          "condition": "temp['skill-choice-ret-lycbh4qpcv'] == \"subv_transparencia\"",
+          "node": "node-subv_transparencia"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "encuesta.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "5c8876d9db",
+      "name": "node-subv_trabajadores",
+      "onEnter": [
+        "say #!builtin_text-owXDpP"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "0fe833dde0",
+      "name": "node-subv_transparencia-copy",
+      "onEnter": [
+        "say #!builtin_text-47IqMB"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "4aa2dc2a1e",
+      "name": "node-subv_transparencia-copy-copy",
+      "onEnter": [
+        "say #!builtin_text-wtcWQI"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "type": "standard"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "jflu22nhsq",
+    "contentId": "builtin_single-choice-1xeD_R",
+    "invalidContentId": "builtin_text-dXcuA_",
+    "keywords": {
+      "padron": [
+        "padron",
+        "Sí, de padrón"
+      ],
+      "terminar": [
+        "terminar",
+        "No"
+      ],
+      "subvenciones": [
+        "subvenciones",
+        "Sí, de subvenciones"
+      ],
+      "sociales": [
+        "sociales",
+        "Sí, se ayudas sociales"
+      ],
+      "generales": [
+        "generales",
+        "Sí, de otro servicios"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-1xeD_R {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "725872"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"jflu22nhsq\",\"contentId\":\"builtin_single-choice-1xeD_R\",\"invalidContentId\":\"builtin_text-dXcuA_\",\"keywords\":{\"padron\":[\"padron\",\"Sí, de padrón\"],\"terminar\":[\"terminar\",\"No\"],\"subvenciones\":[\"subvenciones\",\"Sí, de subvenciones\"],\"sociales\":[\"sociales\",\"Sí, se ayudas sociales\"],\"generales\":[\"generales\",\"Sí, de otro servicios\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-jflu22nhsq'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "532033"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"jflu22nhsq\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-jflu22nhsq']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "105741"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-dXcuA_ {}",
+        "say #!builtin_single-choice-1xeD_R {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "140980"
+    }
+  ]
+}

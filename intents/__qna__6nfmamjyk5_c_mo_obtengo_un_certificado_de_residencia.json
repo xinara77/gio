@@ -1,0 +1,16 @@
+{
+  "name": "__qna__6nfmamjyk5_c_mo_obtengo_un_certificado_de_residencia",
+  "contexts": [
+    "padron"
+  ],
+  "utterances": {
+    "es": [
+      "¿Cómo obtengo un certificado de residencia?",
+      "Certificado de residencia",
+      "Certificado de empadronamiento",
+      "obtener un certificado de empadronamiento",
+      "certificado de empadronamiento individual"
+    ]
+  },
+  "slots": []
+}

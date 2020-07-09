@@ -1,0 +1,126 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": []
+  },
+  "startNode": "choice-padron",
+  "description": "",
+  "nodes": [
+    {
+      "id": "b3a12291e5",
+      "name": "node-certificado_individual",
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-dLGJhV"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-73ae72",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-padron",
+      "flow": "skills/choice-73ae72.flow.json",
+      "next": [
+        {
+          "caption": "User picked [cert_in...]",
+          "condition": "temp['skill-choice-ret-3pbwwpich3'] == \"cert_individual\"",
+          "node": "node-certificado_individual"
+        },
+        {
+          "caption": "User picked [cert_co...]",
+          "condition": "temp['skill-choice-ret-3pbwwpich3'] == \"cert_convivencia\"",
+          "node": "node-certificado_convivencia"
+        },
+        {
+          "caption": "User picked [cert_hi...]",
+          "condition": "temp['skill-choice-ret-3pbwwpich3'] == \"cert_historico\"",
+          "node": "node-certificado_historico"
+        },
+        {
+          "caption": "User picked [cambio_...]",
+          "condition": "temp['skill-choice-ret-3pbwwpich3'] == \"cambio_padron\"",
+          "node": "node-cambio_domicilio"
+        },
+        {
+          "caption": "User picked [actuali...]",
+          "condition": "temp['skill-choice-ret-3pbwwpich3'] == \"actualizar_padron\"",
+          "node": "node-actualizacion_datos"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "encuesta.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "959f257f48",
+      "name": "node-certificado_convivencia",
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-sE5RQk"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "203b002375",
+      "name": "node-cambio_domicilio",
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-4TJY6e"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "b78bebb789",
+      "name": "node-certificado_historico",
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-EqmgvS"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "e38c2016cf",
+      "name": "node-actualizacion_datos",
+      "next": [
+        {
+          "condition": "true",
+          "node": "mas_preguntas.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-5QY4cQ"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

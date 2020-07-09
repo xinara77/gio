@@ -1,0 +1,107 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "lycbh4qpcv",
+    "contentId": "builtin_single-choice-FnqAzX",
+    "invalidContentId": "builtin_text-dXcuA_",
+    "keywords": {
+      "subv_trabajadores": [
+        "subv_trabajadores",
+        "Subvenciones para contratación de trabajadores/as"
+      ],
+      "subv_impulsa": [
+        "subv_impulsa",
+        "Subvenciones para el desarrollo empresarial"
+      ],
+      "subv_registro": [
+        "subv_registro",
+        "Otras solicitudes de subvenciones"
+      ],
+      "subv_transparencia": [
+        "subv_transparencia",
+        "Comunicación de información/documentación por subvención recibida para cumplimiento de transparencia"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-FnqAzX {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "617478"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"lycbh4qpcv\",\"contentId\":\"builtin_single-choice-FnqAzX\",\"invalidContentId\":\"builtin_text-dXcuA_\",\"keywords\":{\"subv_trabajadores\":[\"subv_trabajadores\",\"Subvenciones para contratación de trabajadores/as\"],\"subv_impulsa\":[\"subv_impulsa\",\"Subvenciones para el desarrollo empresarial\"],\"subv_registro\":[\"subv_registro\",\"Otras solicitudes de subvenciones\"],\"subv_transparencia\":[\"subv_transparencia\",\"Comunicación de información/documentación por subvención recibida para cumplimiento de transparencia\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-lycbh4qpcv'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "472490"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"lycbh4qpcv\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-lycbh4qpcv']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "317451"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-dXcuA_ {}",
+        "say #!builtin_single-choice-FnqAzX {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "424213"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "3pbwwpich3",
+    "contentId": "builtin_single-choice-chnhe1",
+    "invalidContentId": "builtin_text-dXcuA_",
+    "keywords": {
+      "cert_individual": [
+        "cert_individual",
+        "Certificado de residencia individual"
+      ],
+      "cert_convivencia": [
+        "cert_convivencia",
+        "Certificado de convivencia"
+      ],
+      "cert_historico": [
+        "cert_historico",
+        "Certificado histórico del padrón"
+      ],
+      "cambio_padron": [
+        "cambio_padron",
+        "Cambiar el domicilio"
+      ],
+      "actualizar_padron": [
+        "actualizar_padron",
+        "Actualizar información distinta a la residencia"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-chnhe1 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "304463"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"3pbwwpich3\",\"contentId\":\"builtin_single-choice-chnhe1\",\"invalidContentId\":\"builtin_text-dXcuA_\",\"keywords\":{\"cert_individual\":[\"cert_individual\",\"Certificado de residencia individual\"],\"cert_convivencia\":[\"cert_convivencia\",\"Certificado de convivencia\"],\"cert_historico\":[\"cert_historico\",\"Certificado histórico del padrón\"],\"cambio_padron\":[\"cambio_padron\",\"Cambiar el domicilio\"],\"actualizar_padron\":[\"actualizar_padron\",\"Actualizar información distinta a la residencia\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-3pbwwpich3'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "806152"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"3pbwwpich3\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-3pbwwpich3']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "126115"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-dXcuA_ {}",
+        "say #!builtin_single-choice-chnhe1 {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "012609"
+    }
+  ]
+}

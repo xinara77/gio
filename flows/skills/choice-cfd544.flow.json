@@ -1,0 +1,111 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "randomId": "5jamdaaqdm",
+    "contentId": "builtin_single-choice-_IyyfV",
+    "invalidContentId": "builtin_text-dXcuA_",
+    "keywords": {
+      "padron": [
+        "padron",
+        "Padrón"
+      ],
+      "subvencion": [
+        "subvencion",
+        "Ayudas/subvenciones"
+      ],
+      "ayudas": [
+        "ayudas",
+        "Ayudas sociales"
+      ],
+      "servicios_generales": [
+        "servicios_generales",
+        "Servicios generales"
+      ],
+      "ninguno": [
+        "ninguno",
+        "Ninguno"
+      ]
+    },
+    "config": {
+      "nbMaxRetries": 1,
+      "repeatChoicesOnInvalid": true
+    }
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_single-choice-_IyyfV {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "067279"
+    },
+    {
+      "name": "parse",
+      "onReceive": [
+        "basic-skills/choice_parse_answer {\"randomId\":\"5jamdaaqdm\",\"contentId\":\"builtin_single-choice-_IyyfV\",\"invalidContentId\":\"builtin_text-dXcuA_\",\"keywords\":{\"padron\":[\"padron\",\"Padrón\"],\"subvencion\":[\"subvencion\",\"Ayudas/subvenciones\"],\"ayudas\":[\"ayudas\",\"Ayudas sociales\"],\"servicios_generales\":[\"servicios_generales\",\"Servicios generales\"],\"ninguno\":[\"ninguno\",\"Ninguno\"]},\"config\":{\"nbMaxRetries\":1,\"repeatChoicesOnInvalid\":true}}"
+      ],
+      "next": [
+        {
+          "condition": "temp['skill-choice-valid-5jamdaaqdm'] === true",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "invalid"
+        }
+      ],
+      "triggers": [
+        {
+          "conditions": [
+            {
+              "id": "always"
+            }
+          ]
+        }
+      ],
+      "onEnter": [],
+      "id": "422792"
+    },
+    {
+      "name": "invalid",
+      "onEnter": [
+        "basic-skills/choice_invalid_answer {\"randomId\":\"5jamdaaqdm\"}"
+      ],
+      "next": [
+        {
+          "condition": "Number(temp['skill-choice-invalid-count-5jamdaaqdm']) > Number(1)",
+          "node": "#"
+        },
+        {
+          "condition": "true",
+          "node": "sorry"
+        }
+      ],
+      "id": "509214"
+    },
+    {
+      "name": "sorry",
+      "onEnter": [
+        "say #!builtin_text-dXcuA_ {}",
+        "say #!builtin_single-choice-_IyyfV {\"skill\":\"choice\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "parse"
+        }
+      ],
+      "id": "238774"
+    }
+  ]
+}

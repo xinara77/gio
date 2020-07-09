@@ -1,0 +1,209 @@
+[
+  {
+    "id": "builtin_single-choice-_IyyfV",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Padrón",
+          "value": "padron"
+        },
+        {
+          "title": "Subvenciones",
+          "value": "subvencion"
+        },
+        {
+          "title": "Ayudas sociales",
+          "value": "ayudas"
+        },
+        {
+          "title": "Servicios generales",
+          "value": "servicios_generales"
+        },
+        {
+          "title": "Ninguno",
+          "value": "ninguno"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Tengo información sobre los siguientes temas"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-17T16:10:37.882Z",
+    "modifiedOn": "2020-07-09T09:16:55.950Z"
+  },
+  {
+    "id": "builtin_single-choice-RP5_Ww",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Si",
+          "value": "ok"
+        },
+        {
+          "title": "No",
+          "value": "fallo"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Ayudame a mejorar ¿Has encontrado lo que buscabas?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T18:02:36.966Z",
+    "modifiedOn": "2020-07-09T06:57:51.126Z"
+  },
+  {
+    "id": "builtin_single-choice-1xeD_R",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Sí, de padrón",
+          "value": "padron"
+        },
+        {
+          "title": "No",
+          "value": "terminar"
+        },
+        {
+          "title": "Sí, de subvenciones",
+          "value": "subvenciones"
+        },
+        {
+          "title": "Sí, se ayudas sociales",
+          "value": "sociales"
+        },
+        {
+          "title": "Sí, de otro servicios",
+          "value": "generales"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "¿Tienes alguna pregunta más?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T18:14:31.080Z",
+    "modifiedOn": "2020-07-09T08:56:42.517Z"
+  },
+  {
+    "id": "builtin_single-choice-chnhe1",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Certificado de residencia individual",
+          "value": "cert_individual"
+        },
+        {
+          "title": "Certificado de convivencia",
+          "value": "cert_convivencia"
+        },
+        {
+          "title": "Certificado histórico del padrón",
+          "value": "cert_historico"
+        },
+        {
+          "title": "Cambiar el domicilio",
+          "value": "cambio_padron"
+        },
+        {
+          "title": "Actualizar información distinta a la residencia",
+          "value": "actualizar_padron"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Selecciona el trámite del que quieres información."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T18:37:10.479Z",
+    "modifiedOn": "2020-06-15T14:58:17.751Z"
+  },
+  {
+    "id": "builtin_single-choice-UfC8pp",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Registro electrónico",
+          "value": "registro"
+        },
+        {
+          "title": "Aportar información a una solicitud anterior o contestar un requerimiento del Ayuntamiento",
+          "value": "requerimiento"
+        },
+        {
+          "title": "Acceder a las notificaciones electrónicas",
+          "value": "notificacion"
+        },
+        {
+          "title": "Resolver una incidencia técnica con los servicios electrónicos",
+          "value": "incidencia"
+        },
+        {
+          "title": "Solicitar información general",
+          "value": "informacion"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Aquí encontraras información sobre los siguientes servicios"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T11:06:49.922Z",
+    "modifiedOn": "2020-07-08T13:28:48.605Z"
+  },
+  {
+    "id": "builtin_single-choice-SQDAPg",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Renta social básica",
+          "value": "renta_social"
+        },
+        {
+          "title": "Beca atención temprana",
+          "value": "as_atencion_temprana"
+        },
+        {
+          "value": "as_comedor",
+          "title": "Beca comedor"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Puedes obtener informaición sobre las siguietnes ayudas sociales"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T16:18:58.368Z",
+    "modifiedOn": "2020-06-16T08:10:15.510Z"
+  },
+  {
+    "id": "builtin_single-choice-FnqAzX",
+    "formData": {
+      "choices$es": [
+        {
+          "title": "Subvenciones para contratación de trabajadores/as",
+          "value": "subv_trabajadores"
+        },
+        {
+          "title": "Subvenciones para el desarrollo empresarial",
+          "value": "subv_impulsa"
+        },
+        {
+          "title": "Otras solicitudes de subvenciones",
+          "value": "subv_registro"
+        },
+        {
+          "title": "Comunicación de información/documentación por subvención recibida para cumplimiento de transparencia",
+          "value": "subv_transparencia"
+        }
+      ],
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Ahora mismo tengo información sobre los siguientes servicios"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T17:13:15.431Z",
+    "modifiedOn": "2020-07-08T13:28:21.414Z"
+  }
+]

@@ -1,0 +1,299 @@
+[
+  {
+    "id": "builtin_text-61eugf",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Actualizar la vivienda en el padrón"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-17T15:22:26.596Z",
+    "modifiedOn": "2020-05-17T15:22:26.596Z"
+  },
+  {
+    "id": "builtin_text-9cDQE8",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Hola soy GIO ¿Cómo te llamas?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-17T15:32:57.537Z",
+    "modifiedOn": "2020-05-17T15:57:51.630Z"
+  },
+  {
+    "id": "builtin_text-orZ7kw",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Hola, {{user.name}} ¿en qué puedo ayudarte? "
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-17T15:41:16.934Z",
+    "modifiedOn": "2020-05-27T14:21:43.534Z"
+  },
+  {
+    "id": "builtin_text-qlPMWr",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Por ahora sólo puedo ayudarte sobre estos temas, lo siento"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-17T16:25:18.810Z",
+    "modifiedOn": "2020-07-09T08:52:20.521Z"
+  },
+  {
+    "id": "builtin_text-xuFRdF",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Parece que eso ha sido todo. ¿Me contestas a la siguiente pregunta para que pueda mejorar?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T17:58:37.088Z",
+    "modifiedOn": "2020-05-25T18:41:58.734Z"
+  },
+  {
+    "id": "builtin_text-8-w9Yb",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Me alegra haberte ayudado"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T18:08:44.928Z",
+    "modifiedOn": "2020-06-01T15:31:56.020Z"
+  },
+  {
+    "id": "builtin_text-uhxmBg",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Siento no tener la información que necesitas."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T18:20:32.685Z",
+    "modifiedOn": "2020-06-01T15:32:23.961Z"
+  },
+  {
+    "id": "builtin_text-gkZjJv",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Hasta la próxima {{user.name}}. Si necesitas ayuda en otro momento aquí estaré &#128512;"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T18:24:18.461Z",
+    "modifiedOn": "2020-05-25T19:22:53.314Z"
+  },
+  {
+    "id": "builtin_text-1WIHvd",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Muy bien, hablemos del padrón. ¿Qué necesitas?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-05-25T18:26:47.517Z",
+    "modifiedOn": "2020-05-25T18:26:47.517Z"
+  },
+  {
+    "id": "builtin_text-sE5RQk",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Para obtener un certificado de convivencia se ha de solicitar por <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030481598686606402&action=make&dboidProcedure=6262630470365419506402\">registro electrónico</a> aportando la <a href=\"https://sedeelectronica.gijon.es/multimedia_objects/download?object_type=document&object_id=253936\">autorizarización</a> de las personas mayores de edad con las que se convive y sus copias del DNI o la autorización a consultar sus datos."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T06:02:04.889Z",
+    "modifiedOn": "2020-06-15T06:04:45.267Z"
+  },
+  {
+    "id": "builtin_text-EqmgvS",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Para obtener un certificado histórico de residencia puede solicitarlo a través del <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030481598686606402&action=make&dboidProcedure=6262630470365419506402\">registro electrónico</a>"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T06:07:54.269Z",
+    "modifiedOn": "2020-06-15T06:07:54.269Z"
+  },
+  {
+    "id": "builtin_text-4TJY6e",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Puedes actualizar tu dirección a través del <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030481598686606402&action=make&dboidProcedure=6262630470365419506402\">registro electrónico</a> adjuntando el  <a href=\"https://sedeelectronica.gijon.es/from/5625/publicacions/show/4720-02-01-alta-en-el-padron-de-habitantes-y-solicitud-de-cambio-de-domicilio-en-el-termino-municipal\">modelo normalizado</a> y la siguiente  <a href=\"https://sedeelectronica.gijon.es/multimedia_objects/download?object_type=document&object_id=253637\">documentación</a>."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T06:36:09.278Z",
+    "modifiedOn": "2020-07-09T08:02:24.458Z"
+  },
+  {
+    "id": "builtin_text-5QY4cQ",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Puedes solicitar la actualización a través del <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030481598686606402&action=make&dboidProcedure=6262630470365419506402\">registro electrónico</a>, adjuntando la documentación que justique el cambio. <br>\nLas actualizaciones por nacimiento o defunción las hacemos nosotros en cuanto nos lo comunica el registro civil, no es necesario que hagas ningún trámite de padrón."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T06:43:34.187Z",
+    "modifiedOn": "2020-06-16T08:12:16.808Z"
+  },
+  {
+    "id": "builtin_text-uq7iIM",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Podrás presentar cualquier escrito a através del <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030481598686606402&action=make&dboidProcedure=6262630470365419506402\">registro electrónico</a>.<br>\nRecuerda comprobar que no hay ningún servicio electrónico específico en el <a href=\"https://acerca.gijon.es/sta/Relec/CatalogBrowse\">catálogo de trámites</a>.<br>\nRecuerda que si ya has presentado anteriormente la solicitud y deseas completarla o te hemos pedido que nos aportes más información disponemos de un <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030470365666706402&action=make&dboidProcedure=6262630470365419506402&urlBack=\">formulario específico</a>."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T11:15:16.564Z",
+    "modifiedOn": "2020-07-09T07:53:48.324Z"
+  },
+  {
+    "id": "builtin_text-kb0YxI",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "¿Te hemos notificado algo y quieres acceder electrónicamente? Podrás hacerlo si dispones de un <b>certificado electrónico</b> a través del servicio de <a href=\"https://acerca.gijon.es/sta/CarpetaPrivate/Login?APP_CODE=STA&PAGE_CODE=SINGLE_NOTI\">consulta tus notificaciones</a>."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T11:19:08.817Z",
+    "modifiedOn": "2020-07-09T07:49:11.288Z"
+  },
+  {
+    "id": "builtin_text-7Y11Gs",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Si ya has presentado anteriormente la solicitud y deseas completarla o aportar información requerida por el ayuntamiento puedes hacerlo a través del formulario de <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030470365666706402&action=make&dboidProcedure=6262630470365419506402&urlBack=\">aportación de información o documentación</a>.\n\nAlternates"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T12:30:32.639Z",
+    "modifiedOn": "2020-06-15T12:30:32.639Z"
+  },
+  {
+    "id": "builtin_text-0s_VFn",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Si has tenido alguna incidencia al usar los servicios electrónicos municipales puedes comunicárnoslo a través del  <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030495270329306402&action=make&dboidProcedure=6262630495269799006402&urlBack=\">servicio de ayuda</a><br>\nPara agilizar la tramitación recuerda que puedes adjuntarnos la siguiente información: <ul>\n<li>Captura de pantalla donde se vea el error</li>\n<li>Configuración del equipo: puedes consultarla <a href=\"https://acerca.gijon.es/sta/pages/utils/checkClient.jsp\">aquí<a/> y adjuntar el resultado</li>\n<li>La información del certificado utlizado, en su caso, para la identificación, que puedes obtener <a href=\"https://acerca.gijon.es/eParticipa/test_certificate.aspx\">aquí<a/></li> "
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T12:41:01.391Z",
+    "modifiedOn": "2020-06-15T12:41:01.391Z"
+  },
+  {
+    "id": "builtin_text-VsV_p1",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Puedes solicitar cualquier tipo de información sobre trámites o eventos municipales a través del siguiente <a href=\"\">formulario de solicitud de información</a>"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T14:32:34.231Z",
+    "modifiedOn": "2020-06-15T14:32:34.231Z"
+  },
+  {
+    "id": "builtin_text-0oHiGZ",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Desde este formulario electrónico puedes <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030599534077706402&action=make&dboidProcedure=6262630595936543506402&urlBack=\">solicitar la renta social básica</a>. Consulta el apartado <b>documentación a presentar</b> para confirmar los anexos que has de incluir junto con la solicitud."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T16:27:15.362Z",
+    "modifiedOn": "2020-06-15T16:27:15.362Z"
+  },
+  {
+    "id": "builtin_text-Y69Rpm",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Puedes solicitar a través de este formulario electrónico específico la <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030621941356206402&action=make&dboidProcedure=6262630621938268906402&urlBack=\">beca para el servicio de atención temprana</a> en los centros escolares públicos y concertados, ya sea con o sin desayuno."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T16:30:54.082Z",
+    "modifiedOn": "2020-06-15T16:31:31.413Z"
+  },
+  {
+    "id": "builtin_text-gnXiE7",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Puedes solicitar a través de este formulario electrónico específico la <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030620877060706402&action=make&dboidProcedure=6262630620876909506402&urlBack=\">beca para el servicio de comedor</a> en los centros escolares públicos y concertados, ya sea con o sin desayuno. Puedes consultar la documentación a presentar en el enlace de la solicitud."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T16:37:16.644Z",
+    "modifiedOn": "2020-06-15T16:37:16.644Z"
+  },
+  {
+    "id": "builtin_text-0UtnsT",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Si has recibido una subvención y no dispones de otro medio para publicar la información requerida en materia de transparencia, el Ayuntamiento puede publicarla por tí. Para ello deberás cumplimentar el formulario y adjuntar la documentación indicada en las bases de la subvención concedida a través del servicio de <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030607428738706402&action=make&dboidProcedure=6262630470365419506402&urlBack=\">comunicación de subvenciones recibidas</a>"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T17:18:36.208Z",
+    "modifiedOn": "2020-06-15T17:18:36.208Z"
+  },
+  {
+    "id": "builtin_text-owXDpP",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "El ayuntamieto fomenta el empleo de personas empadronadas en Gijón. Para ello has de contratarlas por un periodo mínimo de 6 meses. Existe un formulario electrónico específico para <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030652581467006402&action=make&dboidProcedure=6262630652575662206402&urlBack=\">solicitar subvención a la contratación por cuenta ajena</a>."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T17:24:53.399Z",
+    "modifiedOn": "2020-06-15T17:27:14.699Z"
+  },
+  {
+    "id": "builtin_text-47IqMB",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "El ayuntamieto fomenta la economía y la innovación en la ciedad a través de dos líneas de ayuda para la creación yde empresas y para la consolidación de las mismas. Puedes solcitarlas a través del formulario electrónico específico <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030572057175006402&action=make&dboidProcedure=6262630572057172606402&urlBack=\">finaciación Impulsa</a>."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T17:30:18.652Z",
+    "modifiedOn": "2020-06-15T17:30:18.652Z"
+  },
+  {
+    "id": "builtin_text-wtcWQI",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "El ayuntamiento, además de las subvenciones ya indicadas,  facilita otras para cuya presentación no existe un formulario específico. Puedes presentarlas a través del <a href=\"https://acerca.gijon.es/sta/Relec/CatalogDetail?dboidRequest=6269030481598686606402&action=make&dboidProcedure=6262630470365419506402&urlBack=>registro electrónico</a> aportando el <a href=\"https://sedeelectronica.gijon.es/page/5625-descarga-de-formularios>modelo normalizado</a> que puedes descargarte de la Sede Electrónica municipal."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-06-15T17:34:57.603Z",
+    "modifiedOn": "2020-06-15T17:34:57.603Z"
+  },
+  {
+    "id": "builtin_text-dLGJhV",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Parece que quieres información sobre cómo obtener un  certificado individual de residencia. Sólo tienes que identificarte y acceder a los <a href=\\\"https://acerca.gijon.es/eParticipa/Products/Carpeta/Public/Login.aspx?returnurl=/eParticipa/Start.aspx?AppScope=CIUDADANO&language=es\\\">servicios de información personal</a> y obtenerlo a través del menú <p style=\\\"font-family: courier\\\">padrón de habitantes</p>"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-07-09T06:54:19.628Z",
+    "modifiedOn": "2020-07-09T08:59:45.906Z"
+  },
+  {
+    "id": "builtin_text-dXcuA_",
+    "formData": {
+      "markdown$es": true,
+      "typing$es": true,
+      "text$es": "Lo siento, no te he entendido, volvamos a probar."
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-07-09T08:06:23.160Z",
+    "modifiedOn": "2020-07-09T08:57:15.503Z"
+  }
+]

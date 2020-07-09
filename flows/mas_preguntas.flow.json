@@ -1,0 +1,49 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "choice-mas_preguntas",
+  "description": "",
+  "nodes": [
+    {
+      "id": "e91fd17ec8",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-mas_preguntas",
+      "flow": "skills/choice-7febd4.flow.json",
+      "next": [
+        {
+          "caption": "User picked [padron]",
+          "condition": "temp['skill-choice-ret-jflu22nhsq'] == \"padron\"",
+          "node": "padron.flow.json"
+        },
+        {
+          "caption": "User picked [terminar]",
+          "condition": "temp['skill-choice-ret-jflu22nhsq'] == \"terminar\"",
+          "node": "encuesta.flow.json"
+        },
+        {
+          "caption": "User picked [subvenc...]",
+          "condition": "temp['skill-choice-ret-jflu22nhsq'] == \"subvenciones\"",
+          "node": "subvenciones.flow.json"
+        },
+        {
+          "caption": "User picked [sociales]",
+          "condition": "temp['skill-choice-ret-jflu22nhsq'] == \"sociales\"",
+          "node": "ayudas_sociales.flow.json"
+        },
+        {
+          "caption": "User picked [general...]",
+          "condition": "temp['skill-choice-ret-jflu22nhsq'] == \"generales\"",
+          "node": "servicios-generales.flow.json"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": "encuesta.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}
